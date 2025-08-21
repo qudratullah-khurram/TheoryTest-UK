@@ -82,7 +82,7 @@ nextBtn.addEventListener("click", () => {
         currentQuestionSet = questions[level];
         currentQuestionIndex = 0;
         levelEl.textContent = level;
-        levelScore = 0; 
+        levelUP = 0; 
         messageEl.textContent = "🎉 Level Up! Questions are getting harder!";
         loadQuestion();
         nextBtn.classList.add("hidden");
@@ -94,9 +94,9 @@ nextBtn.addEventListener("click", () => {
       messageEl.textContent = "😢 Not enough correct answers. Try again!";
       currentQuestionIndex = 0;
       levelUP = 0; 
-      score = 0;
-      loadQuestion();
       
+      loadQuestion();
+      score = 0;
       nextBtn.classList.add("hidden");
     }
   }
